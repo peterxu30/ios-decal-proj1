@@ -13,7 +13,8 @@ class AddToDoItemViewController: UIViewController {
     var toDoList: ToDoItemCollection!
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    @IBOutlet weak var toDoItemText: UITextView!
+//    @IBOutlet weak var toDoItemText: UITextView!
+    @IBOutlet weak var toDoItemText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class AddToDoItemViewController: UIViewController {
     func saveToDoItem() {
 //        print("I worked")
         if toDoItemText.text != "" {
-            toDoList.createNewToDoItem(toDoItemText.text)
+            toDoList.createNewToDoItem(toDoItemText.text!)
 //            print(toDoList.count())
         } else {
 //            print("Not so fast")
