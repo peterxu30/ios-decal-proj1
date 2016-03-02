@@ -1,126 +1,219 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qOY-fF-L0O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8L3-gf-6gL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Daily Stats-->
-        <scene sceneID="Rda-6b-EoH">
+        <!--To-Do List-->
+        <scene sceneID="wRS-ya-lro">
             <objects>
-                <viewController title="Daily Stats" id="PIh-Vz-mv6" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oP5-U4-An8"/>
-                        <viewControllerLayoutGuide type="bottom" id="Lpg-u0-6TC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wB5-i2-tRJ">
+                <tableViewController id="gFO-41-6EC" customClass="ToDoListTableViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="k16-tA-Y10">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Daily Statistics" id="ZhB-D4-XoN"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BDU-uf-PoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2453.5" y="244.5"/>
-        </scene>
-        <!--To-Do List-->
-        <scene sceneID="gef-nG-pke">
-            <objects>
-                <tableViewController id="aaE-ib-NwH" customClass="ToDoListViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UvR-Ps-XXt">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="toDoItem" editingAccessoryType="checkmark" textLabel="cps-pQ-o38" style="IBUITableViewCellStyleDefault" id="jxd-lq-Raf">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ToDoItemCell" editingAccessoryType="checkmark" textLabel="kGt-2f-3FU" style="IBUITableViewCellStyleDefault" id="T7D-Xf-RNt" customClass="ToDoListTableViewCell" customModule="To_Do_List" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jxd-lq-Raf" id="M5W-cR-9Vs">
-                                    <rect key="frame" x="0.0" y="0.0" width="336" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T7D-Xf-RNt" id="We5-CA-p5P">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cps-pQ-o38">
-                                            <rect key="frame" x="15" y="0.0" width="321" height="43.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kGt-2f-3FU">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="tintColor" red="0.039215686270000001" green="0.37647058820000001" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="aaE-ib-NwH" id="i7D-ad-adc"/>
-                            <outlet property="delegate" destination="aaE-ib-NwH" id="anI-6Z-hJb"/>
+                            <outlet property="dataSource" destination="gFO-41-6EC" id="ueT-Q9-qTl"/>
+                            <outlet property="delegate" destination="gFO-41-6EC" id="mi2-We-ODp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="To-Do List" id="OrK-4J-hJ1"/>
+                    <navigationItem key="navigationItem" title="To-Do List" id="WCO-fQ-ZZW">
+                        <barButtonItem key="leftBarButtonItem" title="Daily Stats" id="Wlh-FN-TVc">
+                            <connections>
+                                <segue destination="dZB-7i-uQA" kind="show" identifier="ToDailyStatsSegue" id="NZj-nk-hQb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SFz-eF-u4L">
+                            <connections>
+                                <segue destination="8QV-Zv-1TY" kind="presentation" identifier="ToAddNewToDoItemSegue" id="F2H-d2-oQa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="edf-BW-c8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jkh-HB-9Kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2453.5" y="-502.5"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="uoZ-3Q-J2h">
-            <objects>
-                <tabBarController id="qOY-fF-L0O" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="euG-TH-ZD9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="gNe-aI-MJg" kind="relationship" relationship="viewControllers" id="9Uv-4u-Z3U"/>
-                        <segue destination="32d-Z7-Fcz" kind="relationship" relationship="viewControllers" id="bR9-Dy-lsy"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6bv-2s-RAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3860.5" y="-85.5"/>
-        </scene>
-        <!--To-Do List-->
-        <scene sceneID="naU-qF-OvH">
-            <objects>
-                <navigationController title="To-Do List" automaticallyAdjustsScrollViewInsets="NO" id="gNe-aI-MJg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="To-Do List" id="uYh-PK-opa"/>
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="1tm-hU-vJX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="aaE-ib-NwH" kind="relationship" relationship="rootViewController" id="glA-NU-O8S"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hGR-6a-sHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3040.5" y="-502.5"/>
+            <point key="canvasLocation" x="-1802.5" y="-484.5"/>
         </scene>
         <!--Daily Statistics-->
-        <scene sceneID="MF9-gB-Asz">
+        <scene sceneID="gMr-gj-YG0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="32d-Z7-Fcz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Daily Statistics" id="oHv-qB-Sx6"/>
+                <viewController id="dZB-7i-uQA" customClass="DailyStatsViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QLG-vK-iXb"/>
+                        <viewControllerLayoutGuide type="bottom" id="p41-ay-MXc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BE9-EZ-jjw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlH-5S-hiM">
+                                <rect key="frame" x="99" y="256" width="177" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XlH-5S-hiM" secondAttribute="height" multiplier="103:90" id="SdZ-iH-MVt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIv-rD-VLX">
+                                <rect key="frame" x="25" y="403" width="324" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="QcU-GB-bWo"/>
+                                    <constraint firstAttribute="width" constant="324" id="qJF-bm-cp5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of tasks completed in the past 24 hours:" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFb-vh-f9n">
+                                <rect key="frame" x="21.5" y="180" width="332" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="121" id="QFZ-aB-CUu"/>
+                                    <constraint firstAttribute="width" constant="332" id="r7Q-YW-xvz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hIv-rD-VLX" firstAttribute="centerY" secondItem="BE9-EZ-jjw" secondAttribute="centerY" constant="110.5" id="4CT-c1-Cnv"/>
+                            <constraint firstItem="XlH-5S-hiM" firstAttribute="centerY" secondItem="BE9-EZ-jjw" secondAttribute="centerY" id="5sT-0x-aNQ"/>
+                            <constraint firstItem="hIv-rD-VLX" firstAttribute="leading" secondItem="XlH-5S-hiM" secondAttribute="leading" constant="-74" id="RJN-6q-XQc"/>
+                            <constraint firstItem="XlH-5S-hiM" firstAttribute="centerX" secondItem="BE9-EZ-jjw" secondAttribute="centerX" id="Y7t-bS-y41"/>
+                            <constraint firstItem="hIv-rD-VLX" firstAttribute="centerX" secondItem="BE9-EZ-jjw" secondAttribute="centerX" id="YaA-jZ-Jns"/>
+                            <constraint firstItem="XlH-5S-hiM" firstAttribute="top" secondItem="aFb-vh-f9n" secondAttribute="bottom" constant="-45" id="nMD-P1-lbb"/>
+                            <constraint firstItem="aFb-vh-f9n" firstAttribute="centerX" secondItem="BE9-EZ-jjw" secondAttribute="centerX" id="yUm-kW-j0x"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Daily Statistics" id="dYg-mW-hdO"/>
+                    <connections>
+                        <outlet property="numberOfCompletedTasksLabel" destination="XlH-5S-hiM" id="Nhr-oT-Riw"/>
+                        <outlet property="productivityScoring" destination="hIv-rD-VLX" id="oqo-ym-VBh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Duw-Vw-Yb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1802.5" y="295.5"/>
+        </scene>
+        <!--New To-Do Item-->
+        <scene sceneID="lzD-2t-Hb4">
+            <objects>
+                <viewController id="him-g8-Dtp" customClass="AddToDoItemViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Any-U4-RBc"/>
+                        <viewControllerLayoutGuide type="bottom" id="c3p-jc-cKQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cuW-hZ-Gpb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="text" translatesAutoresizingMaskIntoConstraints="NO" id="s9v-HF-iyj">
+                                <rect key="frame" x="67" y="121" width="240" height="425"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="mAa-ca-0Sb"/>
+                                    <constraint firstAttribute="height" constant="425" id="v7q-yc-DgE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s9v-HF-iyj" firstAttribute="top" secondItem="Any-U4-RBc" secondAttribute="bottom" constant="101" id="V8t-pn-2DY"/>
+                            <constraint firstItem="s9v-HF-iyj" firstAttribute="centerX" secondItem="cuW-hZ-Gpb" secondAttribute="centerX" id="ViZ-gR-drJ"/>
+                            <constraint firstItem="s9v-HF-iyj" firstAttribute="centerY" secondItem="cuW-hZ-Gpb" secondAttribute="centerY" id="pRX-BA-CI3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New To-Do Item" id="0uB-0P-F4c">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="iPr-o5-YIv">
+                            <connections>
+                                <segue destination="Ak1-eL-34t" kind="unwind" unwindAction="unwindToToDoListTableViewController:" id="1J5-Am-pvJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Sss-tk-yur">
+                            <connections>
+                                <segue destination="Ak1-eL-34t" kind="unwind" unwindAction="unwindToToDoListTableViewController:" id="kW4-So-8K2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="saveButton" destination="Sss-tk-yur" id="lXo-52-27g"/>
+                        <outlet property="toDoItemText" destination="s9v-HF-iyj" id="XoL-eb-4vf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHC-hI-h5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ak1-eL-34t" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-699.5" y="-485.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ysw-b2-rrJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8L3-gf-6gL" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V1U-o1-8hM">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ntS-nO-aSG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="PIh-Vz-mv6" kind="relationship" relationship="rootViewController" id="8M8-nK-vSR"/>
+                        <segue destination="gFO-41-6EC" kind="relationship" relationship="rootViewController" id="Tb6-hM-BL4"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LRc-x0-htm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n2G-Ca-i0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3040.5" y="244.5"/>
+            <point key="canvasLocation" x="-2424.5" y="-484.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ECp-ZI-Oa9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8QV-Zv-1TY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ueH-5Q-dGx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="him-g8-Dtp" kind="relationship" relationship="rootViewController" id="H7u-HQ-l51"/>
+                        <segue destination="him-g8-Dtp" kind="presentation" identifier="ToAddNewToDoItemSegue" id="dMK-wo-aJh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6V-5f-18m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1276" y="-485"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dMK-wo-aJh"/>
+    </inferredMetricsTieBreakers>
 </document>

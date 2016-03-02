@@ -1,14 +1,14 @@
 //
 //  ViewController.swift
-//  To-Do List
+//  ToDoList
 //
-//  Created by Peter Xu on 2/23/16.
+//  Created by Peter Xu on 2/25/16.
 //  Copyright © 2016 Peter Xu. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ToDoListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
